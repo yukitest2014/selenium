@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite">
+  <parameter name ="data" value="/src/tool/test.properties"/>
+  <parameter name ="locator" value="/src/tool/locator.properties"/>
+  <test verbose="2" name="Default test">
+  <groups>
+  	<define name="start126"/>
+  	<define name="startso"/>
+  	<define name="startbaidu"/>
+  	
+  	<define name="FF">
+  			<include name="start126"/>
+  			<include name="startso"/>
+  	</define>
+  	<define name="Chrome">
+  			<include name="start126"/>
+  			<include name="startbaidu"/>
+  	</define>
+  	<define name="IE">
+  			<include name="startso"/>
+  			<include name="startbaidu"/>
+  	</define>
+  		<run>
+  			<include name="browser"/>
+  			<include name="start126"></include>
+  		</run>
+  </groups>
+    <classes>
+      <class name="browser.BrowserTest"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
