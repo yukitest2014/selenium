@@ -99,7 +99,7 @@ public class BrowserTest {
         System.out.println(sum);
     	//Assert.assertEquals(msg, sum);
 		}
-
+  /* ---- yuki 2014 08-08 ----*/
   @AfterMethod(groups="browser")
   public void afterClass() {
 	  driver.quit();
