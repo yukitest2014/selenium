@@ -80,7 +80,7 @@ public class BrowserTest {
         pagetotal = Integer.valueOf(page.getText().split("/")[1]);
         System.out.println(pagetotal);
         List<WebElement> noread = driver.findElements(By.xpath(locator.getValue("noread")));       
-        //System.out.println(noread.size());
+        System.out.println(noread.size());
         
         while(pagetotal>=1){
         	
@@ -99,7 +99,6 @@ public class BrowserTest {
         System.out.println(sum);
     	//Assert.assertEquals(msg, sum);
 		}
-  /* ---- yuki2014-08-08 ----*/
   @AfterMethod(groups="browser")
   public void afterClass() {
 	  driver.quit();
